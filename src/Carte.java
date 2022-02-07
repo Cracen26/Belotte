@@ -34,6 +34,27 @@ public class Carte{
         }
         return "name: "+this.name+"\n"+"signe: "+res+"\n"+"valeur: "+this.value;
     }
+    public int getSigne() {
+        return signe;
+    }
+    public void setSigne(int signe) {
+        this.signe = signe;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getValue() {
+        return value;
+    }
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+
+    
 
 
 }

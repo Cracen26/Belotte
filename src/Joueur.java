@@ -33,10 +33,61 @@ public class Joueur {
         }
         return null;
     } 
-    
-    public void play(int signe){
 
+    public Carte play(int signe){
+        for(Carte c:carteTab){
+            if(c.getSigne()==signe){
+                Carte ech;
+                ech=new Carte(c);
+                c=null;
+                compteur--;
+                return ech;
+            }
+        }
+        return jouerEnPremier();        
     }
+
+    public void tourGagnant(Carte[] carte){
+        for(int i=0;i<carte.length;i++){
+            this.score+=carte[i].getValue();
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public static int getCompteur() {
+        return compteur;
+    }
+
+    public static void setCompteur(int compteur) {
+        Joueur.compteur = compteur;
+    }
+
+    public Carte[] getCarteTab() {
+        return carteTab;
+    }
+
+    public void setCarteTab(Carte[] carteTab) {
+        this.carteTab = carteTab;
+    }
+
+    
+
+
 
     
     
